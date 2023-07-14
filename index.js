@@ -1,7 +1,6 @@
 import { Client } from "@notionhq/client"
 import fs from "fs";
-const notion = new Client({ auth: "secret_kA8zCabtwQye3Y55MpLwWFvJOWlvDLGW66ueQXnD8aw" })
-
+const notion = new Client({ auth: process.env.NOTION_API_SCRET })
 const databaseId = "5ec1bf8366ca430f98f56177dc648180"//process.env.NOTION_DATABASE_ID
 
 async function addItem(text) {
